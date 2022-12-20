@@ -2,7 +2,7 @@
 
 SET UP .env
 
-check SAMPLE_ENV env file for refernce
+check SAMPLE_ENV file for refernce
 
 **Run command to start the project:**
 ``` 
