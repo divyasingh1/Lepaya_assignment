@@ -10,7 +10,7 @@ function getLearnerById(id){
       return new Promise((resolve, reject)=>{
         request(options, function (error, response) {
             if (error) reject(error);
-            console.log(response.body);
+            console.log("Response received");
             resolve(JSON.parse(response.body));
         });
       });
