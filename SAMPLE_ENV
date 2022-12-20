@@ -1,0 +1,7 @@
+//Should not be pushed to git, going it here so that we can run the server as need
+//please tranfer the content to .env file , which should be created in the root of the repo
+
+
+LEPAYA_HR_SERVIC_URL=https://kbfszrxx5vacidgrgdhqzu25r40vyyuw.lambda-url.eu-central-1.on.aws/api
+PORT=8082
+NODE_ENV=dev
