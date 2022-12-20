@@ -6,10 +6,7 @@ check SAMPLE_ENV file for refernce
 
 **Run command to start the project:**
 ``` 
-npm i
-```
-``` 
-npm run start
+npm install && npm start
 ```
 **Backend service will be up on:**
 base url: http://localhost:8082
