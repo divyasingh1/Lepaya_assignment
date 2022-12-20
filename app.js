@@ -4,7 +4,7 @@ var app = express();
 app.use(cors());
 app.use(express.json())
 
-var coursesController = require('./controller/courses/CoursesRoutes');
+var coursesController = require('./src/controller/courses/CoursesRoutes');
 
 app.use('/api', coursesController);
 
