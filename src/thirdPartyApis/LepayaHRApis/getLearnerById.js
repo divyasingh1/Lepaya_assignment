@@ -11,7 +11,7 @@ function getLearnerById(id){
         request(options, function (error, response) {
             if (error) reject(error);
             console.log(response.body);
-            resolve(response.body);
+            resolve(JSON.parse(response.body));
         });
       });
 }

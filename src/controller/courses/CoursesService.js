@@ -1,15 +1,17 @@
 const getCourseById = require("../../thirdPartyApis/LepayaHRApis/getCourseById")
 const getLearnerById = require("../../thirdPartyApis/LepayaHRApis/getLearnerById")
+const getTrainerDetailsById = require("../../thirdPartyApis/LepayaHRApis/getTrainerDetailsById")
 
 class CoursesService {
     constructor() {
     }
     async getCourseDetailsById(courseId){
         let courseDetails = await getCourseById(courseId);
-        courseDetails = JSON.parse(courseDetails)
         let learners = await Promise.all(courseDetails.learners.map(async (learnerId)=>{   
-            return JSON.parse(await getLearnerById(learnerId));  
+            return  getLearnerById(learnerId);  
         }));
+        let trainer = await getTrainerDetailsById(courseDetails.trainerId);
+        courseDetails.trainer = trainer;
         courseDetails.learners = learners;
         return courseDetails;
     }

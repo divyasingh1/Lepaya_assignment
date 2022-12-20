@@ -1,9 +1,9 @@
 const request = require('request');
 
-function getCourseById(id){
+function getTrainerDetailsById(id){
     var options = {
         'method': 'GET',
-        'url': process.env.LEPAYA_HR_SERVIC_URL+'/courses/'+id,
+        'url': process.env.LEPAYA_HR_SERVIC_URL+'/trainers/'+id,
         'headers': {
         }
       };
@@ -16,4 +16,4 @@ function getCourseById(id){
       });
 }
 
-module.exports = getCourseById
+module.exports = getTrainerDetailsById
