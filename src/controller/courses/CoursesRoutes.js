@@ -14,10 +14,10 @@ router.get('/lepaya-courses/:id',async function (req, res) {
     const coursesServiceInst = new CoursesService();
     return coursesServiceInst.getCourseDetailsById(req.params.id)
         .then((data) => {
-            if(data && data.statusCode == 200){
-              res.status(data.statusCode).send({ "status": "SUCCESS", message: "Course details fetched successfully", data});
+            if(data && data.statusCode){
+              res.status(data.statusCode).send(data);
             } else {
-              res.status(data.statusCode).send({ "status": "FAILED", message: "Error in fetching Course details", data});
+              res.status(200).send(data);
             }
         })
         .catch((err) => {

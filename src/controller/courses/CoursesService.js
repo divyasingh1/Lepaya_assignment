@@ -1,9 +1,11 @@
 const getCourseById = require("../../thirdPartyApis/LepayaHRApis/getCourseById")
 const getLearnerById = require("../../thirdPartyApis/LepayaHRApis/getLearnerById")
-const getTrainerDetailsById = require("../../thirdPartyApis/LepayaHRApis/getTrainerDetailsById")
+const getTrainerDetailsById = require("../../thirdPartyApis/LepayaHRApis/getTrainerDetailsById");
+const BaseService = require("../BaseService");
 
-class CoursesService {
+class CoursesService  extends BaseService{
     constructor() {
+      super();
     }
     async getCourseDetailsById(courseId){
         try{
@@ -19,6 +21,7 @@ class CoursesService {
             let trainer = await getTrainerDetailsById(courseDetails.trainerId);
             courseDetails.trainer = trainer;
           }
+          delete courseDetails.trainerId;
           return courseDetails;
     
        } catch(e){
