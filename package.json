@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "mocha --timeout 15000",
+    "start": "node server.js",
+    "test:cov": "nyc --reporter=text mocha"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,15 @@
   },
   "homepage": "https://github.com/divyasingh1/Lepaya_assignment#readme",
   "dependencies": {
+    "chai": "^4.3.7",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
+    "mocha": "^10.2.0",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0"
   }
 }
