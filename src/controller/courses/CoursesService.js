@@ -1,9 +1,8 @@
+const getCourseById = require("../../thirdPartyApis/LepayaHRApis/getCourseById")
 class CoursesService {
     constructor() {
     }
-    getCourseDetailsById(courseId){
-        
-
+    async getCourseDetailsById(courseId){
     }
 }
 

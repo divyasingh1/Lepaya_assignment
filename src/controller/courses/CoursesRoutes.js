@@ -10,9 +10,9 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
 
-router.patch('/lepaya-courses/:id',async function (req, res) {
+router.get('/lepaya-courses/:id',async function (req, res) {
     var coursesServiceInst = new CoursesService();
-    return coursesServiceInst.getCourseDetailsById(id)
+    return coursesServiceInst.getCourseDetailsById(req.params.id)
         .then((data) => {
             res.send({ "status": "SUCCESS", message: "Course details fetched successfully", data});
         })
