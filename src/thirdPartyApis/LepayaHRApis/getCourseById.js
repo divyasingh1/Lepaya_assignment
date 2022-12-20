@@ -1,7 +1,7 @@
 const request = require('request');
 
 function getCourseById(id){
-    var options = {
+    const options = {
         'method': 'GET',
         'url': process.env.LEPAYA_HR_SERVIC_URL+'/courses/'+id,
         'headers': {

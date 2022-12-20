@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var CoursesService = require('./CoursesService');
+const express = require('express');
+const router = express.Router();
+const bodyParser = require('body-parser');
+const CoursesService = require('./CoursesService');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
@@ -11,7 +11,7 @@ router.use(bodyParser.json());
 
 
 router.get('/lepaya-courses/:id',async function (req, res) {
-    var coursesServiceInst = new CoursesService();
+    const coursesServiceInst = new CoursesService();
     return coursesServiceInst.getCourseDetailsById(req.params.id)
         .then((data) => {
             if(data && data.statusCode == 200){
