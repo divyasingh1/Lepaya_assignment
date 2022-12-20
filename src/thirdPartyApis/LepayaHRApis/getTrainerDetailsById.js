@@ -1,19 +1,11 @@
-const request = require('request');
+const executeRequest = require('../../utils/executeRequest');
 
 function getTrainerDetailsById(id){
-    var options = {
-        'method': 'GET',
-        'url': process.env.LEPAYA_HR_SERVIC_URL+'/trainers/'+id,
-        'headers': {
-        }
-      };
-      return new Promise((resolve, reject)=>{
-        request(options, function (error, response) {
-            if (error) reject(error);
-            console.log("Response received");
-            resolve(JSON.parse(response.body));
-        });
-      });
+  try{
+      return executeRequest({url:process.env.LEPAYA_HR_SERVIC_URL+'/trainers/'+id, method: "GET", headers:{}});
+    } catch (e){
+      throw new Error(e);
+    }
 }
 
 module.exports = getTrainerDetailsById
