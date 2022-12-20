@@ -14,6 +14,8 @@ npm run start
 **Backend service will be up on:**
 base url: http://localhost:8082
 
+API: http://localhost:8082/api/lepaya-courses/ef131a0c-3006-4a38-8cfd-085fa08f8361 (GET)
+
 **Run command to start the unit testing:**
 ``` 
 npm test
