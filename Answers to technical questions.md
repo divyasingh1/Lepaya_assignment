@@ -48,6 +48,7 @@
     1. They should be authenticated
     2. They should have more filters
     3. We should create api to get multiple leaners details at a time with filter like courseId ex: course/ef131a0c-3006-4a38-8cfd-085fa08f8361/learners?page=1. We can also put limit like max:100, min:1
+       similarly for trainers and courses as needed.
     4. I can tell more if I get a change to look into the implementation of those apis
 
 **Q: Describe yourself using JSON**
