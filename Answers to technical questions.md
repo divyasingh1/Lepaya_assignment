@@ -47,7 +47,8 @@
     
     1. They should be authenticated
     2. They should have more filters
-    3. I can tell more if I get a change to look into the implementation of those apis
+    3. We should create api to get multiple leaners details at a time. We can put limit like max:100, min:1
+    4. I can tell more if I get a change to look into the implementation of those apis
 
 **Q: Describe yourself using JSON**
 
